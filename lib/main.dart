@@ -1137,7 +1137,7 @@ class _KassaPaginationWidgetState extends State<KassaPaginationWidget> {
 
   Future<void> _fetchData() async {
     try {
-      final response = await http.get(Uri.parse('https://kent2.pythonanywhere.com/reports'));
+      final response = await http.get(Uri.parse('https://kent2.pythonanywhere.com/reports/'));
       if (response.statusCode == 200) {
         final List<dynamic> jsonData = json.decode(response.body)['reports'];
         setState(() {
