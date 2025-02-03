@@ -1169,7 +1169,7 @@ class _KassaPaginationWidgetState extends State<KassaPaginationWidget> {
   Future<void> _deleteReport(String currency) async {
     try {
       final response = await http.delete(
-        Uri.parse('http://kent2.pythonanywhere.com/delete_report?currency=$currency'),
+        Uri.parse('https://kent2.pythonanywhere.com/delete_report?currency=$currency'),
       );
 
       if (response.statusCode == 200) {
